@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body onload="setInterval(calculate,)">	<!--this function to calculate simultaneously-->
+		<div id="calculator">
+		<form id="form" name="calc">		<!-- oninput="show()"  Form begins here -->
+			<!-- To display input values and the result output -->
+			<div id="output-container">
+				<input type="text" id="input" class="output" autofocus="autofocus" onblur="this.focus()" />
+				<input type="text" id="result" class="output" />
+			</div>
+
+			<!-- Buttons  -->
+			<!-- Number Buttons -->
+			<div id="num-btn-container">
+				<input type="button" class="btn-num" value="7" onclick="calc.input.value +='7'"/>
+				<input type="button" class="btn-num" value="8" onclick="calc.input.value +='8'"/>
+				<input type="button" class="btn-num" value="9" onclick="calc.input.value +='9'"/>
+
+				<input type="button" class="btn-num" value="4" onclick="calc.input.value +='4'" />
+				<input type="button" class="btn-num" value="5" onclick="calc.input.value +='5'" />
+				<input type="button" class="btn-num" value="6" onclick="calc.input.value +='6'" />
+
+				<input type="button" class="btn-num" value="1" onclick="calc.input.value +='1'" />
+				<input type="button" class="btn-num" value="2" onclick="calc.input.value +='2'" />
+				<input type="button" class="btn-num" value="3" onclick="calc.input.value +='3'" />
+
+				<input type="button" class="btn-num" value="." onclick="calc.input.value +='.'" />
+				<input type="button" class="btn-num" value="0" onclick="calc.input.value +='0'" />
+				<input type="button" class="btn-num" value="=" onclick="calc.result.value = eval(calc.input.value)" />
+			</div>
+
+			<!-- Operator buttons -->
+			<div id="optr-btn-container">
+				<input type="button" class="btn-optr" value="DEL" onclick="formReset()" />
+				<input type="button" class="btn-optr" value="/" onclick="calc.input.value +='/'" />
+				<input type="button" class="btn-optr" value="*" onclick="calc.input.value +='*'" />
+				<input type="button" class="btn-optr" value="-" onclick="calc.input.value +='-'" />
+				<input type="button" class="btn-optr" value="+" onclick="calc.input.value +='+'" />
+			</div>
+
+			<!-- Side Panel with Math Functions -->
+			<div id="side-btn-container">
+				<input type="button" id="toggle-side-btn" value="«" onclick="toggleSideBtn()">
+				<input type="button" class="btn-side" value="INV" onclick="inverseValues()" />
+				<input type="button" class="btn-side" value="DEG" onclick="" />
+				<input type="button" class="btn-side" value="%" onclick="" />
+				<input type="button" class="btn-side" value="sin" onclick="" />
+				<input type="button" class="btn-side" value="cos" onclick="" />
+				<input type="button" class="btn-side" value="tan" onclick="" />
+				<input type="button" class="btn-side" value="ln" onclick="" />
+				<input type="button" class="btn-side" value="log" onclick="" />
+				<input type="button" class="btn-side" value="!" onclick=""/>
+				<input type="button" class="btn-side" value="π" onclick=""/>
+				<input type="button" class="btn-side" value="e" onclick=""/>
+				<input type="button" class="btn-side" value="^" onclick=""/>
+				<input type="button" class="btn-side" value="(" onclick=""/>
+				<input type="button" class="btn-side" value=")" onclick=""/>
+				<input type="button" class="btn-side" value="√" onclick=""/>
+			</div>
+
+		</form>	
+		</div>
+		<script src="javascript.js" type="text/javascript"></script>
+	</body>
+	
+</html>

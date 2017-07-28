@@ -1,0 +1,128 @@
+body{
+	overflow: auto;
+}
+	/*Calculator div to hold the calculator*/
+#calculator{		
+	height: 500px;
+	width:300px;
+	position: fixed;
+	overflow: hidden;
+	border-radius: 10px;
+	transition: 1s ease-in-out;
+}
+	/*div to contain the input and output values*/
+#output-container{
+	box-sizing: border-box;
+	padding: 0;
+	width: inherit;
+	margin: 0;
+	height: 160px;
+}
+
+#output-container input[type="text"]{
+	height: 80px;
+	border: none;
+	width: 100%;
+	background-color: #E8E8E8;
+	box-sizing: border-box;
+	padding: 5px;
+	font-size: 30px;
+	overflow-x: auto;
+	color: #000;
+	text-align: right;
+	font-family: monospace;
+}
+
+#output-container #result{
+	color: #585858;
+}
+
+#output-container input[type="text"]:focus, input[type="button"]:focus{
+	outline: none;
+}
+	/*Number button container styles*/
+#num-btn-container{
+	background-color: #484848;
+	width: 75%;
+	height: 340px;
+	float: left;
+	padding: 0;
+	transition: 1s;
+	overflow: hidden;
+}
+	/*styling the number buttons*/
+.btn-num{
+	width: 75px;
+	height: 85px;
+	margin: 0 -2px 0 -2px;
+	font-size: 25px;
+	font-weight: 100;
+	font-family: "Antic";
+	background-color: #484848;
+}
+
+.btn-num, .btn-optr{
+	border: none;
+	padding: 0;
+	color:white;
+	transition: 0.5s;
+}
+	/*This is the style for the operator button container*/
+#optr-btn-container{
+	background-color: #787878;
+	width: 25%;
+	height: 340px;
+	float: right;
+	padding: 0;
+	transition: 1s;
+}
+	/*styles for the operator buttons*/
+.btn-optr{
+	width: 60px;
+	height: 68px;
+	margin: 0 0px 0 -2px;
+	font-size: 17px;
+	font-family: Advent Pro;
+	font-weight: 400;
+	background-color: #787878;
+}
+
+.btn-num:hover, .btn-optr:hover{
+	background-color: black;
+
+}
+
+		/*Button to toggle side math functions*/
+#side-btn-container{
+	background-color: aqua;
+	width: 225px;
+	height: 340px;
+	position: absolute;
+	top:160px; left:282px;
+	z-index: 1000;
+	overflow:hidden;
+	transition: 1s;
+}
+	/*Sidebar button styling*/
+.btn-side{
+	width: 70px;
+	height: 68px;
+	background-color: aqua;
+	transition: 0.5s;
+	color: black;
+	border: none;
+	margin: 0 0 0 -5px;
+}
+
+.btn-side:hover{
+	background-color: #808080;
+}
+	/*Button to toggle the side panel*/
+#toggle-side-btn{
+	float: left;
+	height: inherit;
+	width: 22px;
+	border: 0;
+	background-color: aqua;
+	font-size: 20px;
+}
